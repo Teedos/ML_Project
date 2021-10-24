@@ -1,0 +1,94 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2021
+
+% ready for submission
+\usepackage{neurips_2021}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2021}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2021}
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2021}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+\title{Big data bowl 2021}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{
+  Massimo Hong\\
+  Department of Computer Science\\
+  Tsinghua University\\
+  \texttt{hongcd21@mails.tsinghua.edu.cn} \\
+  Student id: 2020280082}
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+%}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  NFL is one of the biggest and most prestigious sport league in the United States, with an average attendance of any sport in the world. The competition consists of 32 teams from two different conferences, battling each other in the span of eighteen weeks, playing a total of 17 games in the regular season, followed by seven teams from each conference, who will be competing in the play-offs.\\
+A neural network \textit{should} be more accurate than a logistic regression, that is essentially just a subset of a neural network. 
+In our project we will gather and filter data from the seasons 2018-2020, analise the various statistics and feed the obtained parameters to a PNN in order to get the win probability of a team against a rival. In the end, we will give the same inputs to a logistic regression model and compare the respective outputs.
+\end{abstract}
+
+\section{Data gathering and filtering}
+Various statistics are obtained at \url{https://nextgenstats.nfl.com} and from the official nfl site. All the data will be stored in a csv file.\\ After getting enough values, we will filter and organize them by players and corresponding teams, in order to get an easier view of 
+what a team's playstyle is, their strong points, and weaknesses.
+\section{Data analysis}
+We can use the gathered information to determine factors like:
+\begin{itemize}
+\item against which play a team concedes the most points or scores the most points, 
+\item the most important attacking player on the team,
+\item if the team has an advantage against the rival team,
+\item what could be the contribution of a certain player to the team.
+\end{itemize}
+
+\section{PNN training}
+We will divide the data into training set and test set. The training set will be approximately 2/3 of the total data set.  
+
+\end{document}
