@@ -73,22 +73,28 @@
 \begin{abstract}
   NFL is one of the biggest and most prestigious sport league in the United States, with an average attendance of any sport in the world. The competition consists of 32 teams from two different conferences, battling each other in the span of eighteen weeks, playing a total of 17 games in the regular season, followed by seven teams from each conference, who will be competing in the play-offs.\\
 A neural network \textit{should} be more accurate than a logistic regression, that is essentially just a subset of a neural network. 
-In our project we will gather and filter data from the seasons 2018-2020, analise the various statistics and feed the obtained parameters to a PNN in order to get the win probability of a team against a rival. In the end, we will give the same inputs to a logistic regression model and compare the respective outputs.
+In our project we will gather and filter data from the seasons 2018-2020, analise the various statistics and feed the obtained parameters to the neural network in order to get the win probability of a team against a rival. In the end, we will give the same inputs to a logistic regression model and compare the respective outputs. Other than win probability, it is also possible to predict wether a certain play or strategy will be successfull or not.
 \end{abstract}
 
-\section{Data gathering and filtering}
+\section{Dataset}
 Various statistics are obtained at \url{https://nextgenstats.nfl.com} and from the official nfl site. All the data will be stored in a csv file.\\ After getting enough values, we will filter and organize them by players and corresponding teams, in order to get an easier view of 
 what a team's playstyle is, their strong points, and weaknesses.
 \section{Data analysis}
 We can use the gathered information to determine factors like:
 \begin{itemize}
-\item against which play a team concedes the most points or scores the most points, 
+\item against what play a team concedes the most points or scores the most points, 
 \item the most important attacking player on the team,
 \item if the team has an advantage against the rival team,
 \item what could be the contribution of a certain player to the team.
 \end{itemize}
 
-\section{PNN training}
+\section{Which neural network to use}
 We will divide the data into training set and test set. The training set will be approximately 2/3 of the total data set.  
-
+A possible choice for the neural network is the Probabilistic neural network (\textbf{PNN}), as these kind of networks usually generate an accurate target probability score.
+Anothere option is to use a classification network to predict wheter a play was successfull or not
+\section{Regression Model}
+It is more natural to use a logistic regression approach rather than a linear model, even though the output is not exactly binary. A few tweaks might be necessary in order to make it work correctly, such as using odds instead of probabilities, for an easier interpretation.
+The advantages of a regression model is its easy implementation and ready to use methods offered by the python \textit{sklearn} library.
+\section{Conclusion}
+After getting the results from the neural network and the regression model, we can proceed to compare them. If everything is implemented correctly, the neural network should have a higher accuracy score than the regression model.
 \end{document}
