@@ -1,4 +1,3 @@
-from os import chdir
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
@@ -40,9 +39,12 @@ players_df['birthDate'] = np.round((pd.Timestamp.now() - players_df['birthDate']
 players_df = players_df.rename(columns={'birthDate': 'age'})
 
 
-###Difference between SS#####
+###Difference between SS, change if you want other positions#####
+query_string = 'Position == "SS"'
+plot_title = "Number of unique plays by SS in 2018 season"
 
-pos= players_df.query('Position == "SS"')
+pos= players_df.query(query_string)
+
 filtered_df = tracking_df.loc[tracking_df['nflId'].isin(pos['nflId'])]
 filtered_df = filtered_df[["nflId","playId"]]
 df_temp = filtered_df.groupby(['nflId','playId'])
@@ -59,7 +61,7 @@ fig = px.bar(x = x_axis,y = y_axis,
     labels ={
         "x": "NFL ID",
         "y": "Number of unique plays"
-    }, title = "Number of unique plays by SS in 2018 season")
+    }, title = plot_title)
 fig.update_xaxes(type='category')
 fig.show()
 
@@ -67,3 +69,4 @@ del players_df
 del df_temp
 del df_unique
 del tracking_df
+del pos
