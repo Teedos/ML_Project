@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
 
-plays = 'nfl-big-data-bowl-2022/plays.csv'
+plays ='nfl-big-data-bowl-2022/plays.csv'
 plays_df = pd.read_csv(plays)
 
 x = np.array(plays_df[['playId','quarter', 'down', 'yardsToGo', 'kickerId', 'penaltyYards', 'preSnapHomeScore', 'kickLength', 'absoluteYardlineNumber']].values.tolist())

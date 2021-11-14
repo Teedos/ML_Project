@@ -72,12 +72,14 @@
 
 \begin{abstract}
   NFL is one of the biggest and most prestigious sport league in the United States, with the highest average attendance of any sport in the world. \\
-The kaggle competitions has a list of compulsory, but not limited, tasks to complete. In our project we will also gather and filter data from the seasons 2018-2020, analise the various statistics and feed the obtained parameters to the neural network in order to get the win probability of a team against a rival. In the end, we will give the same inputs to a logistic regression model and compare the respective outputs. Other than win probability, it could also be possible to predict whether a certain play or strategy will be successfull or not. \\
-A neural network \textit{should} be more accurate than a logistic regression, that is essentially just a "subset" of the former. 
+This competition proposes 3 potential topics to study, and it is advised to examine one of them thoroughly rather than several. We chose to work on the third one which is to rank special teams’ players as it seemed very clear and feasible. We feel like the biggest challenge of this topic is to manage coming up with original ideas. If, eventually, we aren’t able to do so we would then consider changing topic for one of the other two.
+Before deeply diving into the project, the subject required a lot of reading and documentation.
+Because we were not familiar with American football and its rules, we studied the sport and especially special teams since it is the topic of the competition. Being an Analytics competition, it requires a very good understanding of the game, of the strategies used. We might even want to come up with new strategies depending on our results.\\
+To rank and compare special teams’ players, we want to find for each of the special teams’ positions a way to grade each player (using different provided and relevant parameters). For each position, the way of grading will not be the same. And then, still by position, we will rank the players.
 \end{abstract}
 \section{Introduction to NFL}
 The National Football League (NFL) is a professional American football league consisting of 32 teams, divided equally between the National Football Conference (NFC) and the American Football Conference (AFC). The NFL is one of the four major North American professional sports leagues, the highest professional level of American football in the world. \\
-The NFL's eighteen-week regular season runs from early September to early January, with each team playing seventeen games and having one bye week. Following the conclusion of the regular season, seven teams from each conference (four division winners and three wild card teams) advance to the playoffs, a single-elimination tournament culminating in the Super Bowl, which is usually held on the first Sunday in February and is played between the champions of the NFC and AFC\cite{NFL_Wiki}.
+The NFL's eighteen-week regular season runs from early September to early January, with each team playing seventeen games and having one bye week. Following the conclusion of the regular season, seven teams from each conference (four division winners and three wild card teams) advance to the playoffs, a single-elimination tournament culminating in the Super Bowl, which is usually held on the first Sunday in February and is played between the champions of the NFC and AFC.
 \section{Dataset}
 The dataset is divided into multiple csv files:
 \begin{itemize}
@@ -99,8 +101,8 @@ All these factors can be used to better predict the outcome of a certain play, s
 \section{Required tasks of the competition}
 \begin{itemize}
 \item Create a new special teams metric.
-\item Quantify special teams strategy. Special teams’ coaches are among the most creative and innovative in the league. Compare and contrast how each team game plans. Which strategies yield the best results? What are other strategies that could be adopted\cite{NFL_Kaggle}?
-\item Rank special teams players. Each team employs a variety of players (including longsnappers, kickers, punters, and other utility special teams players). How do they stack up with respect to one another\cite{NFL_Kaggle}?
+\item Quantify special teams strategy. Special teams’ coaches are among the most creative and innovative in the league. Compare and contrast how each team game plans. Which strategies yield the best results? What are other strategies that could be adopted?
+\item Rank special teams players. Each team employs a variety of players (including longsnappers, kickers, punters, and other utility special teams players). How do they stack up with respect to one another?
 \end{itemize}
 
 \section{Which neural network to use}
@@ -113,6 +115,5 @@ The advantages of a regression model is its easy implementation and ready to use
 \section{Conclusion}
 After getting the results from the neural network and the regression model, we can proceed to compare them. If everything is implemented correctly, the neural network should have a higher accuracy score than the regression model.
 
-\bibliographystyle{unsrt}
-\bibliography{bibliography.bib}
+
 \end{document}
