@@ -88,7 +88,7 @@ Here are the bar charts for height and weight of players in the 'SS' position. N
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{weight.png}
 	\caption{Weight of SS player(lbs)}
 \end{figure} 
-Next, we analyzed the plays a player of a certain position executed in the 2018 season.  Players and play are identified respectively by the keys nflId and playId. The $tracking_2018.csv$ contains all the details of the 2018 season.\\
+Next, we analyzed the plays a player of a certain position executed in the 2018 season.  Players and play are identified respectively by the keys nflId and playId. The tracking2018.csv contains all the details of the 2018 season.\\
 In this example we have gathered all the player in the "SS" position and analized the number of unique plays they have done in the 2018 season.\\ In order to do so we have made a query in the players.csv to get the nflId of all players of said position. Next, we selected the Ids present in both players.csv and tracking 2018.csv (this way, we have found all the SS players who have played in the 2018 season) and found the number of unique plays they have executed. Below is a graphic that displays the number of unique plays each player has done. The x axis represents the nflId, while the y axis the number of plays.
 \begin{figure}[H]
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{SS_unique_plays_2018.png}
@@ -96,7 +96,7 @@ In this example we have gathered all the player in the "SS" position and analize
 \end{figure}
 
 \section{Regression Model}
-We have used a multivariate linear regression model on the followin numberical columns of the plays.csv file to predict the play result:
+We have used a multivariate linear regression model on the following numberical columns of the plays.csv file to predict the play result:
 \begin{itemize}
 	\item playId,
 	\item quarter,
